@@ -1,0 +1,42 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function zero_negativity(arr){
+			for(var i = 0; i < arr.length; i++){
+				if(arr[i] > 0){
+					return true;
+				} else {
+					return false;
+				}
+			}
+		};
+		function isEven(num){
+			if(num % 2 === 0){
+				return true;
+			} else{
+				return false;
+			}
+		};
+		function how_many_even(arr){
+			for(var i = 0;i < arr.length; i++){
+				var even = 0;
+				if(isEven(arr[i]) === true){
+					even++;
+				}
+				return even;
+			}
+		}
+		function dummy_array(n){
+			for(var i = 0; i<n; i++){
+				var fakeArray = []
+				var num = Math.floor(Math.random()) * 10;
+				fakeArray.push(num);
+			}
+		} return fakeArray;
+	</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	function Ninja(name, health){
+		this.name = name;
+		this.health = 100;
+		this.speed = 3;
+		this.strength = 3;
+
+		this.sayName = function(){
+			console.log("My name is " + this.name + "!");
+		}
+		this.showStats = function(){
+			console.log("Health: " + this.health + ", Speed: " + this.speed + ", Strength: " + this.strength);
+		}
+		this.drinkShake = function(){
+			this.health += 10;
+		}
+	}
+	Ninja.prototype.punch = function(Ninja){
+		Ninja.health -= 5;
+		console.log(Ninja.name + ' was punched by ' + this.name + ' and lost 5 health!')
+	}
+	Ninja.prototype.kick = function(Ninja){
+		Ninja.health -= 15;
+		console.log(Ninja.name + ' was kicked by ' + this.name + ' and lost 15 health!')
+	}
+	</script>
+</body>
+</html>
