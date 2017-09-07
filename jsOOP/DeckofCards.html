@@ -5,21 +5,66 @@
 </head>
 <body>
 	<script>
-		var suit = ['Hearts', 'Diamonds', 'Spades', 'Clubs'];
-		var value = ['Ace', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King'];
+		// var suit = ['Hearts', 'Diamonds', 'Spades', 'Clubs'];
+		// var value = ['Ace', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King'];
+		// class Deck{
+		// 	constructor(suit, value){
+		// 		this.suit = suit;
+		// 		this.value = value;
+		// 	}
+		// 	buildDeck{
+		// 		for(let i = 0;i< suit.length;i++){
+		// 			for(let j = 0;j<value.length;j++){
+		// 				var Card = {suit,value};
+		// 			}
+		// 		}
+		// 	}
+		// }
 		class Deck{
-			constructor(suit, value){
-				this.suit = suit;
-				this.value = value;
+			constructor(){
+				this.deck = [];
 			}
-			buildDeck{
-				for(let i = 0;i< suit.length;i++){
-					for(let j = 0;j<value.length;j++){
-						var Card = {suit,value};
+
+			build(){
+				this.deck = [];
+				let suits = ['Hearts', 'Spades', 'Diamonds', 'Clubs'];
+				let faces = ['Ace', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King'];
+				for(let suit in suits){
+					for(let face in faces){
+						this.deck.push(faces[face] + ' of ' + suits[suit]);
 					}
 				}
+				return this;
+			}
+			shuffle(){
+				let m = this.deck.length, t, i;
+				while(m){
+					i = Math.floor(Math.random() * m--);
+					t = this.deck[m];
+					this.deck[m] = this.deck[i];
+					this.deck[i] = t;
+				}
+				return this;
+			}
+			deal(){
+				return this.deck.pop();
 			}
 		}
+		class Player{
+			constructor(name){
+				this.name = name;
+				this.hand = [];
+			}
+			draw(deck){
+				this.hand.push(deck.deal());
+				return this;
+			}
+			discard(){
+				this.hand.pop();
+				return this;
+			}
+		}
+
 	</script>
 </body>
 </html>
