@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "async": "^2.5.0",
+    "color": "^2.0.0",
     "colors": "^1.1.2",
     "express": "^4.15.4",
     "heroku": "^0.2.0",
