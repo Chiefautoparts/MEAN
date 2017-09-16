@@ -1,0 +1,38 @@
+{
+	"result": [{
+		"firstname": "joe",
+		"lastname": "smith",
+		"title": "Mr.",
+		"company": "Tacos 'R us",
+		"jobtitle": "Head Tacoer",
+		"primarycontactnumber": "+5555555555",
+		"othercontactnumbers": [
+			"+5555551234",
+			"+1231231234"
+		],
+		"primaryemailaddress": "joe@tacos.com",
+		"groups": [
+			"Tacos",
+			"Burritos"
+		]
+	},
+	{
+		"firstname": "Lee",
+		"lastname": "Cardholder",
+		"title": "Mr.",
+		"company": "Credit Fraud Inc",
+		"jobtitle": "Lead Fraudulator",
+		"primarycontactnumber": "+1235551234",
+		"othercontactnumbers": [
+			"+5555554321",
+			"+1231234321"
+		],
+		"primaryemailaddress": "L.Cardholder@fraud.com",
+		"groups": [
+			"Card Numbers",
+			"Stolen Social Security numbers"
+		]
+	},
+	}
+]
+}
