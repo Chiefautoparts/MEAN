@@ -1,0 +1,13 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Quoting Dojo</title>
+</head>
+<body>
+	<h1>Would you look at these quotes?!?!</h1>
+	<% for (var i in quotes) { %>
+		<h4>Author: <%= quotes[i].name %></h4>
+		<p>Quotes: <% quotes[i].qoute %></p>
+	<% } %>
+</body>
+</html>
