@@ -1,0 +1,19 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Mongeese</title>
+</head>
+<body>
+	<h1>Look at all these MONGEESE</h1>
+	<h6>Yes Mongeese is an acceptable plural for mongoose</h6>
+	<a href="/new">Add Mongeese</a>
+	<% for (idx in geese) { %>
+		<p>Name: <a href="/<%=geese[idx]._id%>"><%= geese[idx].name %></a>
+		<a href="/<%=geese[idx]._id%>/edit/">Update Geese</a>
+		<form action="/<%=geese[idx]._id%>/delete/" method='post'>
+			<input type="submit" value="DELETE">
+		</form>
+		</p>
+	<% } %>
+</body>
+</html>

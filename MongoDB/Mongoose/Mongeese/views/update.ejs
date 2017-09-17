@@ -1,0 +1,15 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Edit The Mongeese</title>
+</head>
+<body>
+	<h2>Edit #<%= geese.name %></h2>
+	<form action="/<%=geese.id%>" method="post">
+		Name: <input type="text" name="name" value="<%=geese.name%>">
+		Awesome Rating: <input type="text" name="rank" value="<%=geese.rank%>">
+		<input type="submit" value="Update Geese">
+	</form>
+	<a href="/">Home</a>
+</body>
+</html>
