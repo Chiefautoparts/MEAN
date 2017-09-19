@@ -1,0 +1,39 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Messages Yall!!!!</title>
+</head>
+<body>
+	<section>
+		<h1>Sweet Message Board</h1>
+	</section>
+	<form action="/message" method="post">
+		Name: <input type="text" name="name">
+		Message: <textarea name="message"></textarea>
+		<input type="submit" value="Add Message BRAH!!">
+	</form>
+	<% if(typeof(errors) != 'undefined' ) { %>
+		<% for (var i in errors) { %>
+			<h3><%= errors[i].message %></h3>
+		<% } %>
+	<% } else { %>
+		<article>
+			<% for(i in messages) { %>
+				<section>
+					<h3>Name: <%= messages[i].name %></h3>
+					<h3>Messages: <%= messages.[i].message %></h3>
+					<% for (t in messages[i]._comments) { %>
+						<h4><%= "Name: " + messages[i]._comments[t].name %></h4>
+						<h4><%= "Comment: " + messages[i]._comments[t].text %></h4>
+					<% } %>
+					<form action=<%="/comment/" + messages[i]._id %> method="post">
+						Name: <input type="text" name="name">
+						Comment: <textarea name="comment"></textarea>
+						<input type="submit" value="Comment Comment Comment">
+					</form>
+				</section>
+			<% } %>
+		</article>
+	<% } %>
+</body>
+</html>
