@@ -1,1 +1,11 @@
-.current { background-color: yellow; }
+section {
+    height: 100px;
+    text-align: center;
+}
+button {
+    
+    font-weight: bold;
+}
+.selected {
+    background-color: yellow;
+}
