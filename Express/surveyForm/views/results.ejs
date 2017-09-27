@@ -1,0 +1,18 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>results</title>
+</head>
+<body>
+	<h1>Submitted Information</h1>
+	<ul>
+		<li>Name: <%= locals.name %></li>
+		<li>Dojo Location: <%= locals.location %></li>
+		<li>Favorite Language: <%= locals.language %></li>
+		<li>Comments: <%= locals.comment %></li>
+	</ul>
+	<form action="return" method="GET">
+		<button  type="submit">Go Back</button>
+	</form>
+</body>
+</html>
