@@ -1,0 +1,18 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<section>
+		<h1>Counter</h1>	
+		<p><%= count %> </p>
+		<form action="/plusTwo" method='POST'>
+			<button type="submit" name="submit" values="addTwo">Count!</button>
+		</form>
+		<form action="/reset" method="POST">
+			<button type="submit" name="submit" values="reset">Reset Count</button>
+		</form>
+	</section>
+</body>
+</html>
